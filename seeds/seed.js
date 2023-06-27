@@ -1,21 +1,24 @@
 const sequelize = require('../config/connection');
-const { User, Project } = require('../models');
+const { Admin, Beverage, Entree } = require('../models');
 
-const userData = require('./userData.json');
-const projectData = require('./projectData.json');
+const AdminData = require('./adminData.json');
+const beverageData = require('./beverageData.json');
+const entreeData = require('./entreeData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const users = await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
+  const currentAdmins = await Admin.bulkCreate(AdminData);
 
-  for (const project of projectData) {
-    await Project.create({
-      ...project,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
+  for (const beverage of beverageData) {
+    await Beverage.create({
+      ...beverage,
+    });
+  }
+
+  for (const entree of entreeData) {
+    await Entree.create({
+      ...entree,
     });
   }
 
