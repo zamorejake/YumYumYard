@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Mojito",
+    "description": "Refreshing cocktail made with rum, mint leaves, lime juice, and soda water.",
+    "price": 8.99,
+    "in_stock": true,
+    "has_alcohol": true
+  },
+  {
+    "name": "Iced Coffee",
+    "description": "Chilled coffee beverage served with ice and a touch of milk.",
+    "price": 4.99,
+    "in_stock": true,
+    "has_alcohol": false
+  },
+  {
+    "name": "Green Smoothie",
+    "description": "Healthy blend of spinach, kale, banana, and pineapple juice.",
+    "price": 6.99,
+    "in_stock": false,
+    "has_alcohol": false
+  }
+]
