@@ -4,20 +4,23 @@
     "description": "Juicy grilled chicken served with a side of vegetables.",
     "price": 12.99,
     "in_stock": true,
-    "allergy": null
+    "allergy": null,
+    "image": "../images/grilled_chicken.jpg"
   },
   {
     "name": "Spaghetti Bolognese",
     "description": "Classic Italian dish with spaghetti noodles and rich tomato sauce.",
     "price": 9.99,
     "in_stock": true,
-    "allergy": null
+    "allergy": null,
+    "image": "../images/Spaghetti_Bolognese.jpg"
   },
   {
     "name": "Veggie Burger",
     "description": "A delicious plant-based burger patty served on a sesame seed bun.",
     "price": 8.99,
     "in_stock": false,
-    "allergy": null
+    "allergy": null,
+    "image": "../images/veggie_burger.jpg"
   }
 ]

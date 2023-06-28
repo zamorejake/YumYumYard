@@ -1,19 +1,18 @@
 const router = require('express').Router();
-const { Entree, Admin } = require('../models');
+const { Entree, Admin, Beverage } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
-    const entreeData = await Entree.findAll({
-    });
-
+    const entreeData = await Entree.findAll({});
+    const beverageData = await Beverage.findAll({});
     // Serialize data so the template can read it
     const entrees = entreeData.map((entree) => entree.get({ plain: true }));
-
+    const beverages = beverageData.map((bev) => bev.get({ plain: true }));
     // Pass serialized data and session flag into template
     res.render('homepage', { 
-      entrees, 
+      entrees, beverages,
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -43,7 +42,6 @@ router.get('/admin', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const adminData = await Admin.findByPk(req.session.admin_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Admin }],
     });
     const admin = adminData.get({ plain: true });
 
