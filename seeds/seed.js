@@ -8,7 +8,11 @@ const entreeData = require('./entreeData.json');
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const currentAdmins = await Admin.bulkCreate(AdminData);
+
+  for (const admin of AdminData) {
+    await Admin.create(admin);
+    };
+  
 
   for (const beverage of beverageData) {
     await Beverage.create({
