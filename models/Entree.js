@@ -29,6 +29,9 @@ Entree.init(
     allergy: {
       type: DataTypes.STRING,
     },
+    image: {
+      type: DataTypes.STRING,
+    },
   },
   {
     sequelize,

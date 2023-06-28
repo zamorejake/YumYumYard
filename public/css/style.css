@@ -23,7 +23,12 @@ header, .project:not(:last-child) {
   margin-left: -5px;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
 
 footer{
   margin-top: auto;
