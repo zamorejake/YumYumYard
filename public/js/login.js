@@ -14,10 +14,11 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      // If successful, redirect the browser to the profile page
-      document.location.replace('/profile');
+      document.location.replace('/admin');
     } else {
-      alert("didnt work");
+      console.log(email)
+      console.log(password)
+      alert("Incorrect username or password please try again.");
     }
   }
 };
