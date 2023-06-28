@@ -41,11 +41,10 @@ router.get('/entree/:id', async (req, res) => {
 router.get('/admin', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const adminData = await Admin.findByPk(req.session.user_id, {
+    const adminData = await Admin.findByPk(req.session.admin_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
+      include: [{ model: Admin }],
     });
-
     const admin = adminData.get({ plain: true });
 
     res.render('profile', {
@@ -53,7 +52,8 @@ router.get('/admin', withAuth, async (req, res) => {
       logged_in: true
     });
   } catch (err) {
-    res.status(500).json(err);
+    //res.status(500).json(err);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 

@@ -14,12 +14,11 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      // If successful, redirect the browser to the profile page
       document.location.replace('/admin');
     } else {
       console.log(email)
       console.log(password)
-      alert("didnt work");
+      alert("Incorrect username or password please try again.");
     }
   }
 };
