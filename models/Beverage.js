@@ -30,6 +30,9 @@ Beverage.init(
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
+    image: {
+      type: DataTypes.STRING,
+    },
   },
   {
     sequelize,

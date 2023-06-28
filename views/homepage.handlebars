@@ -1,4 +1,4 @@
-<img src="../images/restaurant.jpg" alt="restaurant">
+<div class="center"><img src="../images/restaurant.jpg" alt="restaurant"></div>
 
 <!-- Loop over each object in the projects array -->
 {{#each entrees as |entree| }}
@@ -8,7 +8,24 @@
   </div>
   <div class="col-md-7">
     <p>
-      {{entree.name}}
+      <h2>{{entree.name}}</h2></br>
+      <img src="{{entree.image}}" alt="{{entree.name}}" width="200" height="200">
+      
+    </p>
+  </div>
+</div>
+{{/each}}
+
+{{#each beverages as |beverage| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+      
+  </div>
+  <div class="col-md-7">
+    <p>
+      <h2>{{beverage.name}}</h2></br>
+      <img src="{{beverage.image}}" alt="{{beverage.name}}" width="200" height="200">
+      
     </p>
   </div>
 </div>
