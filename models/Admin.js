@@ -38,13 +38,13 @@ Admin.init(
   },
   {
     hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
+      beforeCreate: async (newAdminData) => {
+        newAdminData.password = await bcrypt.hash(newAdminData.password, 10);
+        return newAdminData;
       },
-      beforeUpdate: async (updatedUserData) => {
-        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
-        return updatedUserData;
+      beforeUpdate: async (updatedAdminData) => {
+        updatedAdminData.password = await bcrypt.hash(updatedAdminData.password, 10);
+        return updatedAdminData;
       },
     },
     sequelize,

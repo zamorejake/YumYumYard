@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Entree, User } = require('../models');
+const { Entree, Admin } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -24,18 +24,12 @@ router.get('/', async (req, res) => {
 router.get('/entree/:id', async (req, res) => {
   try {
     const entreeData = await Entree.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
     });
 
-    const project = projectData.get({ plain: true });
+    const entree = entreeData.get({ plain: true });
 
     res.render('project', {
-      ...project,
+      ...entree,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -44,29 +38,29 @@ router.get('/entree/:id', async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/admin', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
+    const adminData = await Admin.findByPk(req.session.admin_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
+      include: [{ model: Admin }],
     });
-
-    const user = userData.get({ plain: true });
+    const admin = adminData.get({ plain: true });
 
     res.render('profile', {
-      ...user,
+      ...admin,
       logged_in: true
     });
   } catch (err) {
-    res.status(500).json(err);
+    //res.status(500).json(err);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/profile');
+    res.redirect('/admin');
     return;
   }
 

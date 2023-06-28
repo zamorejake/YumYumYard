@@ -44,5 +44,5 @@ app.use("/images", express.static(path.join(__dirname, "/public/images")));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log(`Now listening to ${PORT}`));
 });
