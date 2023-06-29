@@ -16,8 +16,6 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/admin');
     } else {
-      console.log(email)
-      console.log(password)
       alert("Incorrect username or password please try again.");
     }
   }
