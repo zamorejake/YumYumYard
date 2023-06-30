@@ -27,7 +27,7 @@ Entree.init(
       allowNull: false,
     },
     allergy: {
-      type: DataTypes.STRING,
+      type: DataTypes.JSON,
     },
     image: {
       type: DataTypes.STRING,
