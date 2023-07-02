@@ -27,7 +27,6 @@ header, .project:not(:last-child) {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 footer{
