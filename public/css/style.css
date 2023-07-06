@@ -23,6 +23,10 @@ header, .project:not(:last-child) {
   padding: .5em;
 }
 
+.btn-danger {
+  background-color: red;
+}
+
 .center {
   display: flex;
   justify-content: center;

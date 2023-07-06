@@ -20,8 +20,6 @@ router.get('/', async (req, res) => {
     }
   });
 
-
-
 // GET all items to render to dashboard/menu
 router.get('/menu', async (req, res) => {
     try {

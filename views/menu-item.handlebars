@@ -1,0 +1,11 @@
+{{#if logged_in}}
+<section class="text-center">
+  <h2>{{name}}</h2>
+  <p>{{description}}</p>
+</section>
+
+<section>
+      <a href="/{{itemType}}/{{id}}/edit" target="_parent"><button class="btn btn-primary">Edit Menu Item</button></a>
+      <button class="btn-danger" data-id="{{post.id}}">DELETE</button>
+</section>
+{{/if}}
