@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
+    // Get all menu items
     const entreeData = await Entree.findAll({});
     const beverageData = await Beverage.findAll({});
     // Serialize data so the template can read it
@@ -29,6 +29,22 @@ router.get('/entree/:id', async (req, res) => {
 
     res.render('project', {
       ...entree,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/beverage/:id', async (req, res) => {
+  try {
+    const beverageData = await Beverage.findByPk(req.params.id, {
+    });
+
+    const beverage = beverageData.get({ plain: true });
+
+    res.render('project', {
+      ...beverage,
       logged_in: req.session.logged_in
     });
   } catch (err) {
