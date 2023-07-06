@@ -10,11 +10,11 @@
     <p>
       <h2>{{entree.name}} - ${{entree.price}}</h2>
       <img src="{{entree.image}}" alt="{{entree.name}}" width="200" height="200">
-      {{#if allergy}}
+      {{#if entree.allergy}}
       </br></br>
-        <span class="allergy-warning">
-        {{entree.allergy}}
-        </span>
+          {{#each entree.allergy}}
+            <span class="allergy-warning">{{this}}</span> &zwnj; 
+          {{/each}}
       {{/if}}
       </br></br><p>{{entree.description}}</p>
     </p>
@@ -31,6 +31,10 @@
     <p>
       <h2>{{beverage.name}} - ${{beverage.price}}</h2>
       <img src="{{beverage.image}}" alt="{{beverage.name}}" width="200" height="200">
+      {{#if has_alcohol}}
+      </br></br>
+        <span class="alcohol-warning">Contains Alcohol</span>
+      {{/if}}
       </br></br><p>{{beverage.description}}</p>
     </p>
   </div>
