@@ -17,17 +17,22 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-.allergy-warning {
+.allergy-warning, .alcohol-warning {
   color: white;
   background-color: red;
   padding: .5em;
+  font-weight: 700;
+  border-radius: .5em;
+}
+
+.alcohol-warning {
+  background-color: orange;
 }
 
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 footer{

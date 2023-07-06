@@ -45,7 +45,7 @@ router.get('/admin', withAuth, async (req, res) => {
     });
     const admin = adminData.get({ plain: true });
 
-    res.render('profile', {
+    res.render('admin', {
       ...admin,
       logged_in: true
     });
