@@ -1,4 +1,5 @@
-header, .project:not(:last-child) {
+header,
+.project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
@@ -17,7 +18,8 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-.allergy-warning, .alcohol-warning {
+.allergy-warning,
+.alcohol-warning {
   color: white;
   background-color: red;
   padding: .5em;
@@ -39,6 +41,13 @@ header, .project:not(:last-child) {
   align-items: center;
 }
 
-footer{
-  margin-top: auto;
+footer nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer h2 {
+  text-align: center;
+  padding: 15px;
 }

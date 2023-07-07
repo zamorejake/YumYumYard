@@ -13,7 +13,9 @@
 <body>
   <nav>
     <ul>
-      <a href="/"><li><strong>Restaurant</strong></li></a>
+      <a href="/">
+        <li><strong>Restaurant</strong></li>
+      </a>
     </ul>
     <ul>
       {{#if logged_in}}
@@ -25,16 +27,36 @@
       {{/if}}
     </ul>
   </nav>
-  
+
   </header>
   <main class="container container-fluid mt-5">
     <!-- Render the sub layout -->
     {{{ body }}}
   </main>
   <footer>
-    <p>Footer Goes Here!</p>
+    <nav>
+      <ul>
+        <li>
+          <a href="#contact">CONTACT US</a>
+        </li>
+        <li>
+          <a href="#rewards">REWARDS</a>
+        </li>
+        <li>
+          <a href="#careers">CAREERS</a>
+        </li>
+        <li>
+          <a href="#retailShop">SHOP SWAG</a>
+        </li>
+        <li>
+          <a href="#investors">INVESTORS</a>
+        </li>
+      </ul>
+    </nav>
+    <br><br>
+    <br><br>
+    <h2>EXTRA SMOOTH SAUCE</h2>
   </footer>
-  
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
