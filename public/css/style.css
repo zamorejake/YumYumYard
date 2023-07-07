@@ -29,6 +29,10 @@ header, .project:not(:last-child) {
   background-color: orange;
 }
 
+.btn-danger {
+  background-color: red;
+}
+
 .center {
   display: flex;
   justify-content: center;

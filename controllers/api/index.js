@@ -1,8 +1,12 @@
 const router = require('express').Router();
+
 const userRoutes = require('./userRoutes');
-const projectRoutes = require('./projectRoutes');
+const entreeRoutes = require('./entreeRoutes');
+const beverageRoutes = require('./beverageRoutes');
 
 router.use('/users', userRoutes);
-router.use('/entrees', projectRoutes);
+router.use('/entrees', entreeRoutes);
+router.use('/beverages', beverageRoutes);
+
 
 module.exports = router;

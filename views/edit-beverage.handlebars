@@ -1,0 +1,22 @@
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Edit your Beverage:</h3>
+
+    <form class="form edit-post-form">
+      <div class="form-group">
+        <label for="post-title">Beverage Name:</label>
+        <input class="form-input" type="text" id="beverage-name" name="name" value="{{title}}"/>
+      </div>
+      <div class="form-group">
+        <label for="beverage-desc">Beverage Description:</label>
+        <textarea class="form-input" id="beverage-desc" name="description">{{content}}</textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" data-id="{{id}}">Update</button>
+      </div>
+    </form>
+    
+  </div>
+</div>
+
+<script src="/js/menuItems.js"></script>
