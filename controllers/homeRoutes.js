@@ -43,10 +43,10 @@ router.get('/entree/:id/edit', withAuth, async (req, res) => {
     const entreeData = await Entree.findByPk(req.params.id, {
     });
 
-    const post = entreeData.get({ plain: true });
+    const entree = entreeData.get({ plain: true });
         
     res.render('edit-entree', {
-      ...post,
+      ...entree,
       logged_in: req.session.logged_in,
     });
   } catch (err) {

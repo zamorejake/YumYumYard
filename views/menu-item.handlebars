@@ -2,6 +2,18 @@
 <section class="text-center">
   <h2>{{name}}</h2>
   <p>{{description}}</p>
+  <p>{{price}}$</p>
+  {{#if in_stock}}
+  <p>In stock: Yes</p>
+  {{else }}
+  <p>In stock: No</p>
+  {{/if}}
+  {{#if allergy}}
+  <p>{{allergy}}</p>
+  {{/if}}
+  {{#if has_alcohol}}
+  <p>Has Alcohol</p>
+  {{/if}}
 </section>
 
 <section>
@@ -9,3 +21,5 @@
       <button class="btn-danger" data-id="{{post.id}}">DELETE</button>
 </section>
 {{/if}}
+
+{{!-- name, description, price, inStock, allergy, image --}}

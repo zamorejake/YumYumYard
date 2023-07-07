@@ -15,21 +15,47 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+router.put('/:id', withAuth, async (req, res) => {
+  try {
+    const entreeData = await Entree.update({
+      name: req.body.name,
+      description: req.body.description,
+      price: req.body.price,
+      in_stock: req.body.in_stock,
+      allergy: req.body.allergy  
+    },
+    {
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (!entreeData) {
+      res.status(404).json({ message: 'No entree found with this id!' });
+      return;
+    }
+
+    res.status(200).json(entreeData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const EntreeData = await Entree.destroy({
+    const entreeData = await Entree.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!EntreeData) {
+    if (!entreeData) {
       res.status(404).json({ message: 'No Entree found with this id!' });
       return;
     }
 
-    res.status(200).json(EntreeData);
+    res.status(200).json(entreeData);
   } catch (err) {
     res.status(500).json(err);
   }
