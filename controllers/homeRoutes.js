@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
+    // Get all menu items
     const entreeData = await Entree.findAll({});
     const beverageData = await Beverage.findAll({});
     // Serialize data so the template can read it
@@ -26,10 +26,62 @@ router.get('/entree/:id', async (req, res) => {
     });
 
     const entree = entreeData.get({ plain: true });
+    const itemType = 'entree'
 
-    res.render('project', {
+    res.render('menu-item', {
       ...entree,
+      itemType,
       logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/entree/:id/edit', withAuth, async (req, res) => {
+  try {
+    const entreeData = await Entree.findByPk(req.params.id, {
+    });
+
+    const post = entreeData.get({ plain: true });
+        
+    res.render('edit-entree', {
+      ...post,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/beverage/:id', async (req, res) => {
+  try {
+    const beverageData = await Beverage.findByPk(req.params.id, {
+    });
+
+    const beverage = beverageData.get({ plain: true });
+    const itemType = 'beverage'
+
+    res.render('menu-item', {
+      ...beverage,
+      itemType,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/beverage/:id/edit', withAuth, async (req, res) => {
+  try {
+    const beverageData = await Beverage.findByPk(req.params.id, {
+    });
+
+    const post = beverageData.get({ plain: true });
+        
+    res.render('edit-beverage', {
+      ...post,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
