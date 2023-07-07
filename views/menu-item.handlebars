@@ -8,7 +8,12 @@
   {{else }}
   <p>In stock: No</p>
   {{/if}}
+  {{#if allergy}}
   <p>{{allergy}}</p>
+  {{/if}}
+  {{#if has_alcohol}}
+  <p>Has Alcohol</p>
+  {{/if}}
 </section>
 
 <section>
