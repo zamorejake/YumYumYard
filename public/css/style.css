@@ -42,3 +42,19 @@ header, .project:not(:last-child) {
 footer{
   margin-top: auto;
 }
+
+summary {
+  width: min-content;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#center-title {
+  flex-grow: 1;
+  text-align: center;
+  margin-top: .2em;
+}
