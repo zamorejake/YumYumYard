@@ -22,5 +22,101 @@
     "in_stock": false,
     "has_alcohol": false,
     "image": "../images/green_smoothie.jpg"
-  }
+  },
+  {
+    "name": "Tropical Sunrise",
+    "description": "Exotic blend of pineapple, orange juice, and grenadine, reminiscent of a beautiful sunrise on the beach.",
+    "price": 7.99,
+    "in_stock": true,
+    "has_alcohol": false,
+    "image": "../images/tropicalsunrise.jfif"
+  },
+  {
+    "name": "Mango Tango",
+    "description": "Vibrant combination of fresh mangoes, lime juice, and a hint of chili for a spicy kick.",
+    "price": 8.99,
+    "in_stock": true,
+    "has_alcohol": false,
+    "image": "../images/mangotango.jpg"
+  },
+  {
+    "name": "Strawberry Basil Lemonade",
+    "description": "A refreshing mix of strawberries, basil leaves, lemon juice, and sparkling water, perfect for a summer day.",
+    "price": 6.99,
+    "in_stock": true,
+    "has_alcohol": false,
+    "image": "../images/strawberry-basil-square-1.jpg"
+  },
+  {
+    "name": "Passion Fruit Mojito",
+    "description": "A twist on the classic mojito, infused with passion fruit puree and fresh mint leaves.",
+    "price": 9.99,
+    "in_stock": true,
+    "has_alcohol": true,
+    "image": "../images/Passion-Fruit-Mojito-3-2.jpg"
+  },
+  {
+    "name": "Cucumber Mint Cooler",
+    "description": "A refreshing blend of fresh cucumbers, mint, lime juice, and soda water, perfect for cooling off on a hot day.",
+    "price": 7.99,
+    "in_stock": true,
+    "has_alcohol": false,
+    "image": "../images/Cucumber-Mint-Cooler-Square-650-6266-1.jpg"
+  },
+  {
+    "name": "Raspberry Lemonade Spritzer",
+    "description": "Sparkling mix of raspberry puree, lemon juice, and soda water, served over ice for a delightful spritzer.",
+    "price": 6.99,
+    "in_stock": true,
+    "has_alcohol": false,
+    "image": "../images/Raspberry-Lemonade-Spritzers-3-720x720.jpg"
+  },
+  {
+    "name": "Peach Bellini",
+    "description": "A delightful mix of peach puree and sparkling wine, creating a refreshing and fruity cocktail.",
+    "price": 10.99,
+    "in_stock": true,
+    "has_alcohol": true,
+    "image": "../images/frozen_peach_bellini_2.jpg"
+  },
+  {
+    "name": "Matcha Green Tea Latte",
+    "description": "A creamy and invigorating blend of matcha green tea powder, steamed milk, and a touch of sweetness.",
+    "price": 5.99,
+    "in_stock": true,
+    "has_alcohol": false,
+    "image": "../images/Iced-Matcha-Latte2.jpg"
+  },
+  {
+    "name": "Lemon Ginger Iced Tea",
+    "description": "A refreshing blend of iced tea, zesty lemon, and invigorating ginger, perfect for hot summer days.",
+    "price": 4.99,
+    "in_stock": true,
+    "has_alcohol": false,
+    "image": "../images/lemon-iced-tea-1.jpg"
+  },
+  {
+    "name": "Coconut Limeade",
+    "description": "A refreshing blend of coconut water, freshly squeezed lime juice, and a hint of sweetness.",
+    "price": 5.99,
+    "in_stock": true,
+    "has_alcohol": false,
+    "image": "../images/Limonada-de-Coco.jpg"
+  },
+  {
+    "name": "Mint Julep",
+    "description": "A classic Southern cocktail made with bourbon, sugar, water, and fresh mint leaves, served over crushed ice.",
+    "price": 9.99,
+    "in_stock": true,
+    "has_alcohol": true,
+    "image": "../images/CM-Mint-Julep-lpzm-superJumbo.jpg"
+  },
+  {
+    "name": "Raspberry Lemonade",
+    "description": "A delightful combination of tart raspberries, freshly squeezed lemon juice, and a touch of sweetness, served over ice.",
+    "price": 6.99,
+    "in_stock": true,
+    "has_alcohol": false,
+    "image": "../images/raspberrylemonade.jfif"
+  }  
 ]
