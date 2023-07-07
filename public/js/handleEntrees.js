@@ -10,7 +10,7 @@ const newEntree = async (event) => {
 
   const response = await fetch(`/api/entrees`, {
     method: 'POST',
-    body: JSON.stringify({ name, description, price, inStock, allergy, image }),
+    body: JSON.stringify({ name, description, price, inStock, allergy, }),
     headers: {
       'Content-Type': 'application/json',
     },
@@ -28,13 +28,19 @@ const editEntree = async (event) => {
 
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
-    const title = document.querySelector('#post-title').value.trim();
-    const content = document.querySelector('#post-desc').value.trim();
+    const name = document.querySelector('#name').value.trim();
+    const description = document.querySelector('#desc').value.trim();
+    const price = document.querySelector('#price').value.trim();
+    const inStock = document.querySelector('#instock').value.trim();
+    const allergy = document.querySelector('#allergy').value.trim();
+    const image = document.querySelector('#image').value.trim();
+
+    console.log(inStock)
 
 
-    const response = await fetch(`/api/posts/${id}`, {
+    const response = await fetch(`/api/entree/${id}`, {
       method: 'PUT',
-      body: JSON.stringify({ title, content }),
+      body: JSON.stringify({ name, description, price, inStock, allergy, }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -42,7 +48,7 @@ const editEntree = async (event) => {
 
     if (response.ok) {
       console.log('POST EDITED')
-      document.location.replace('/dashboard');
+      document.location.replace('/dashboard/menu');
     } else {
       alert('Failed to update post');
     }

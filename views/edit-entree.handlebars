@@ -1,22 +1,46 @@
-<div class="row mt-4">
-  <div class="col-md-6">
+<section>
+  <div class="">
     <h3>Edit your Entree:</h3>
 
-    <form class="form edit-post-form">
+    <form class="edit-entree-form">
       <div class="form-group">
-        <label for="post-title">Entree Name:</label>
-        <input class="form-input" type="text" id="entree-name" name="name" value="{{title}}"/>
+        <label for="entree-name">Entree Name:</label>
+        <input class="form-input" type="text" id="entree-name" name="name" value="{{name}}"/>
       </div>
       <div class="form-group">
         <label for="entree-desc">Entree Description:</label>
-        <textarea class="form-input" id="entree-desc" name="description">{{content}}</textarea>
+        <textarea class="form-input" id="entree-desc" name="description">{{description}}</textarea>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary" data-id="{{id}}">Update</button>
+        <label for="entree-price">Entree Price:</label>
+        <input class="form-input" type="text" id="entree-price" name="price" value="{{price}}"/>
+      </div>
+      <div class="form-group">
+        <label for="instock">
+        In stock:
+        {{#if in_stock}}
+        <input type="checkbox" id="instock" name="instock" role="switch" checked>
+        {{else }}
+        <input type="checkbox" id="instock" name="instock" role="switch">
+        {{/if}}
+      </label>
+      </div>
+      <div class="form-group">
+        <label for="entree-allergy">Allergies:</label>
+        <textarea class="form-input" id="allergy" name="allergy">{{allergy}}</textarea>
+      </div>
+      
+      <div class="form-group">
+        <button id="submit-button" type="submit" class="btn btn-primary" data-id="{{id}}">Update</button>
       </div>
     </form>
     
   </div>
-</div>
+</section>
 
-<script src="/js/handleEntrees.js"></script>
+<script src="/js/editEntree.js"></script>
+
+
+
+
+{{!-- name, description, price, inStock, allergy, image --}}
