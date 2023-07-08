@@ -1,8 +1,6 @@
-const editBeverage = async (event) => {
+const addBeverage = async (event) => {
     event.preventDefault();
-  
-    const submitButton = document.getElementById('submit-button')
-    const beverage_id = submitButton.getAttribute('data-id');    
+     
     const name = document.querySelector('#beverage-name').value.trim();
     const description = document.querySelector('#beverage-desc').value.trim();
     const price = document.querySelector('#beverage-price').value.trim();
@@ -11,19 +9,21 @@ const editBeverage = async (event) => {
 
     // const image = document.querySelector('#image').value.trim();
 
-    const response = await fetch(`/api/beverages/${beverage_id}`, {
-    method: 'PUT',
+    const response = await fetch(`/api/beverages/`, {
+    method: 'POST',
     body: JSON.stringify({ name, description, price, in_stock, has_alcohol }),
     headers: {
         'Content-Type': 'application/json',
     },
     });
 
+    console.log(response.body)
+
     if (response.ok) {
-    document.location.replace('/dashboard/menu');
+        document.location.replace('/dashboard/menu');
     } else {
-    alert('Failed to update beverage');
+    alert('Failed to add beverage');
     }
   };
 
-  document.getElementById('submit-button').addEventListener('click', editBeverage);
+  document.getElementById('submit-button').addEventListener('click', addBeverage);

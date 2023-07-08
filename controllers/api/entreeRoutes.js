@@ -46,7 +46,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     const entreeData = await Entree.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
+        // user_id: req.session.user_id, don't need this for now as currently only 1 admin
       },
     });
 

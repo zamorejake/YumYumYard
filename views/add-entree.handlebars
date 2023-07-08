@@ -1,43 +1,41 @@
 <section>
   <div class="">
-    <h3>Edit your Entree:</h3>
+    <h3>Add Entree to Menu:</h3>
 
-    <form class="edit-entree-form">
+    <form class="add-entree-form">
       <div class="form-group">
         <label for="entree-name">Entree Name:</label>
-        <input class="form-input" type="text" id="entree-name" name="name" value="{{name}}"/>
+        <input class="form-input" type="text" id="entree-name" name="name"/>
       </div>
       <div class="form-group">
         <label for="entree-desc">Entree Description:</label>
-        <textarea class="form-input" id="entree-desc" name="description">{{description}}</textarea>
+        <textarea class="form-input" id="entree-desc" name="description"></textarea>
       </div>
       <div class="form-group">
         <label for="entree-price">Entree Price:</label>
-        <input class="form-input" type="text" id="entree-price" name="price" value="{{price}}"/>
+        <input class="form-input" type="text" id="entree-price" name="price"/>
       </div>
       <div class="form-group">
         <label for="instock">
         In stock:
-        {{#if in_stock}}
         <input type="checkbox" id="instock" name="instock" role="switch" checked>
-        {{else }}
-        <input type="checkbox" id="instock" name="instock" role="switch">
-        {{/if}}
       </label>
       </div>
       <div class="form-group">
         <label for="entree-allergy">Allergies:</label>
-        <textarea class="form-input" id="allergy" name="allergy">{{allergy}}</textarea>
+        <textarea class="form-input" id="allergy" name="allergy"></textarea>
       </div>
       
       <div class="form-group">
-        <button id="submit-button" type="submit" class="btn btn-primary" data-id="{{id}}">Update</button>
+        <button id="submit-button" type="submit" class="btn btn-primary">Add Entree</button>
       </div>
     </form>
-
+    
     <button><a href="/dashboard/" role="button">Cancel</a></button>
+
+
     
   </div>
 </section>
 
-<script src="/js/editEntree.js"></script>
+<script src="/js/addEntree.js"></script>

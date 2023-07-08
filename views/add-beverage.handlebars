@@ -1,49 +1,42 @@
 <section>
   <div class="">
-    <h3>Edit your Beverage:</h3>
+    <h3>Add Beverage to Menu:</h3>
 
-    <form class="edit-beverage-form">
+    <form class="add-beverage-form">
       <div class="form-group">
         <label for="beverage-name">Beverage Name:</label>
-        <input class="form-input" type="text" id="beverage-name" name="name" value="{{name}}"/>
+        <input class="form-input" type="text" id="beverage-name" name="name"/>
       </div>
       <div class="form-group">
         <label for="beverage-desc">Beverage Description:</label>
-        <textarea class="form-input" id="beverage-desc" name="description">{{description}}</textarea>
+        <textarea class="form-input" id="beverage-desc" name="description"></textarea>
       </div>
       <div class="form-group">
         <label for="beverage-price">Beverage Price:</label>
-        <input class="form-input" type="text" id="beverage-price" name="price" value="{{price}}"/>
+        <input class="form-input" type="text" id="beverage-price" name="price"/>
       </div>
       <div class="form-group">
         <label for="instock">
         In stock:
-        {{#if in_stock}}
         <input type="checkbox" id="instock" name="instock" role="switch" checked>
-        {{else }}
-        <input type="checkbox" id="instock" name="instock" role="switch">
-        {{/if}}
       </label>
       </div>
       <div class="form-group">
         <label for="has_alcohol">
         Has Alcohol:
-        {{#if has_alcohol}}
         <input type="checkbox" id="has_alcohol" name="has_alcohol" role="switch" checked>
-        {{else }}
-        <input type="checkbox" id="has_alcohol" name="has_alcohol" role="switch">
-        {{/if}}
       </label>
       </div>
       
       <div class="form-group">
-        <button id="submit-button" type="submit" class="btn btn-primary" data-id="{{id}}">Update</button>
+        <button id="submit-button" type="submit" class="btn btn-primary">Add Beverage</button>
       </div>
     </form>
 
     <button><a href="/dashboard/" role="button">Cancel</a></button>
+
     
   </div>
 </section>
 
-<script src="/js/editBeverage.js"></script>
+<script src="/js/addBeverage.js"></script>
