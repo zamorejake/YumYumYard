@@ -60,7 +60,7 @@ router.get('/beverage/:id', async (req, res) => {
     });
 
     const beverage = beverageData.get({ plain: true });
-    const itemType = 'beverage'
+    const itemType = 'Beverage'
 
     res.render('menu-item', {
       ...beverage,

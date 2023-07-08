@@ -20,7 +20,12 @@
         <ul role="listbox">
           <li><a href="/beverages">Beverages</a></li>
           <li><a href="/entrees">Entrees</a></li>
+          {{#if logged_in}}
+          <li><a href="/dashboard">Dashboard</a></li>
+          <button class="no-button" id="logout">Logout</button>
+          {{else}}
           <li><a href="/login">Staff Login</a></li>
+          {{/if}}
         </ul>
       </details>
       </div>

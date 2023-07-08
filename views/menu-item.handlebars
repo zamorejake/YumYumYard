@@ -14,12 +14,15 @@
   {{#if has_alcohol}}
   <p>Has Alcohol</p>
   {{/if}}
+  
 </section>
 
 <section>
       <a href="/{{itemType}}/{{id}}/edit" target="_parent"><button class="btn btn-primary">Edit Menu Item</button></a>
-      <button class="btn-danger" data-id="{{post.id}}">DELETE</button>
+      <button id="submit-button" class="btn-danger" data-id="{{id}}">DELETE</button>
 </section>
-{{/if}}
 
-{{!-- name, description, price, inStock, allergy, image --}}
+<script src="/js/delete{{itemType}}.js"></script>
+
+{{/if}}
+<button><a href="/dashboard" role="button">Go Back</a></button>
