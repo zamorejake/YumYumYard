@@ -1,4 +1,4 @@
-<div class="center"><img src="../images/restaurant.jpg" alt="restaurant"></div>
+<div class="center"><img src="../images/restaurant.jpg" alt="restaurant"></div> </br></br>
 
 <!-- Loop over each object in the projects array -->
 {{#each entrees as |entree| }}
@@ -7,7 +7,7 @@
       
   </div>
   <div class="col-md-7">
-    <p>
+    <p id="entrees">
       <h2>{{entree.name}} - ${{entree.price}}</h2>
       <img src="{{entree.image}}" alt="{{entree.name}}" width="200" height="200">
       {{#if entree.allergy}}
@@ -28,7 +28,7 @@
       
   </div>
   <div class="col-md-7">
-    <p>
+    <p id="beverages">
       <h2>{{beverage.name}} - ${{beverage.price}}</h2>
       <img src="{{beverage.image}}" alt="{{beverage.name}}" width="200" height="200">
       {{#if has_alcohol}}
