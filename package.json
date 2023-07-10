@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "16": "^0.0.2",
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
     "dotenv": "^8.2.0",
@@ -28,5 +29,8 @@
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^6.15.0",
     "prettier": "^2.1.2"
+  },"engines": {
+    "npm": ">=8.0.0 <9.0.0",
+    "node": ">=16.0.0 <17.0.0"
   }
 }
