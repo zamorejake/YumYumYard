@@ -1,0 +1,130 @@
+[
+  {
+    "name": "Spaghetti Bolognese",
+    "description": "Classic Italian dish with spaghetti noodles and rich tomato sauce.",
+    "price": 9.99,
+    "in_stock": true,
+    "allergy": ["Gluten", "Egg"],
+    "image": "../images/Spaghetti_Bolognese.jpg"
+  },
+  {
+    "name": "Grilled Chicken",
+    "description": "Juicy grilled chicken served with a side of vegetables.",
+    "price": 12.99,
+    "in_stock": true,
+    "allergy": [],
+    "image": "../images/grilled_chicken.jpg"
+  },
+  {
+    "name": "Veggie Burger",
+    "description": "A delicious plant-based burger patty served on a sesame seed bun.",
+    "price": 8.99,
+    "in_stock": false,
+    "allergy": ["Gluten"],
+    "image": "../images/veggie_burger.jpg"
+  },
+  {
+    "name": "Margherita Pizza",
+    "description": "Traditional Italian pizza topped with fresh tomatoes, mozzarella cheese, and basil leaves.",
+    "price": 11.99,
+    "in_stock": true,
+    "allergy": ["Gluten", "Dairy"],
+    "image": "../images/margherita-pizza.jpg"
+  },
+  {
+    "name": "Beef Stir-Fry",
+    "description": "Tender strips of beef sautéed with assorted vegetables and served with steamed rice.",
+    "price": 14.99,
+    "in_stock": true,
+    "allergy": [],
+    "image": "../images/Beef Stir-Fry.jfif"
+  },
+  {
+    "name": "Shrimp Scampi",
+    "description": "Juicy shrimp cooked in a garlicky butter sauce and served over a bed of pasta.",
+    "price": 16.99,
+    "in_stock": true,
+    "allergy": ["Shellfish", "Gluten"],
+    "image": "../images/Shrimp Scampi.jpg"
+  },
+  {
+    "name": "Chicken Parmesan",
+    "description": "Breaded chicken breast topped with marinara sauce and melted cheese, served with spaghetti.",
+    "price": 13.99,
+    "in_stock": true,
+    "allergy": ["Gluten", "Dairy"],
+    "image": "../images/Chicken-Parmesan-1.jpg"
+  },
+  {
+    "name": "Salmon Teriyaki",
+    "description": "Grilled salmon glazed with a sweet and savory teriyaki sauce, served with steamed vegetables and rice.",
+    "price": 18.99,
+    "in_stock": true,
+    "allergy": [],
+    "image": "../images/teriyaki-salmon-8.jpg"
+  },
+  {
+    "name": "Vegetable Pad Thai",
+    "description": "Stir-fried rice noodles with mixed vegetables, tofu, and a tangy Pad Thai sauce.",
+    "price": 10.99,
+    "in_stock": true,
+    "allergy": ["Gluten", "Soy", "Peanuts"],
+    "image": "../images/Vegetarian-Pad-Thai-Recipe.jpg"
+  },
+  {
+    "name": "Beef Tacos",
+    "description": "Flavorful beef filling served in warm tortillas and topped with fresh salsa and shredded cheese.",
+    "price": 9.99,
+    "in_stock": true,
+    "allergy": ["Gluten", "Dairy"],
+    "image": "../images/Ground-Beef-Tacos-9.jpg"
+  },
+  {
+    "name": "Chicken Alfredo",
+    "description": "Creamy pasta dish with grilled chicken, tossed in a rich Alfredo sauce.",
+    "price": 12.99,
+    "in_stock": true,
+    "allergy": ["Gluten", "Dairy"],
+    "image": "../images/Chicken-Alfredo-bowl.jpg"
+  },
+  {
+    "name": "Spinach and Mushroom Risotto",
+    "description": "Creamy Arborio rice cooked with spinach, mushrooms, and Parmesan cheese.",
+    "price": 11.99,
+    "in_stock": true,
+    "allergy": ["Gluten", "Dairy"],
+    "image": "../images/spinach-mushroom.jfif"
+  },
+  {
+    "name": "Honey Glazed Ham",
+    "description": "Tender ham baked with a sweet and tangy honey glaze, served with roasted potatoes and vegetables.",
+    "price": 15.99,
+    "in_stock": true,
+    "allergy": [],
+    "image": "../images/ham.jpg"
+  },
+  {
+    "name": "Eggplant Parmesan",
+    "description": "Breaded and fried eggplant slices topped with marinara sauce, melted cheese, and served with spaghetti.",
+    "price": 11.99,
+    "in_stock": true,
+    "allergy": ["Gluten", "Dairy"],
+    "image": "../images/eggplant-parmesan-10-scaled.jpg"
+  },
+  {
+    "name": "Lemon Herb Roasted Chicken",
+    "description": "Tender and flavorful roasted chicken marinated with lemon and herbs, served with roasted vegetables.",
+    "price": 13.99,
+    "in_stock": true,
+    "allergy": [],
+    "image": "../images/lemonherb.jfif"
+  },
+  {
+    "name": "Shrimp Linguine",
+    "description": "Linguine pasta tossed with succulent shrimp, garlic, olive oil, and a touch of red pepper flakes.",
+    "price": 16.99,
+    "in_stock": true,
+    "allergy": ["Gluten", "Shellfish"],
+    "image": "../images/shrimp-linguine-recipe-17.jpg"
+  }
+]

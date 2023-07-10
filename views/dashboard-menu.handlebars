@@ -1,0 +1,26 @@
+<section class="entrees">
+    <h1>Entrees:</h1>
+
+    <details role="list">
+        <summary aria-haspopup="listbox">Select Menu Item</summary>
+        <ul role="listbox">
+            {{#each entrees as |entree| }}
+            <li><a href="/entree/{{entree.id}}">{{entree.name}}</a></li>
+            {{/each}}
+        </ul>
+    </details>
+</section>
+
+<section class="beverages">
+    <h1>Drinks:</h1>
+    <details role="list">
+        <summary aria-haspopup="listbox">Select Menu Item</summary>
+        <ul role="listbox">
+            {{#each beverages as |beverage| }}
+            <li><a href="/beverage/{{beverage.id}}">{{beverage.name}}</a></li>
+            {{/each}}
+        </ul>
+    </details>
+</section>
+
+<a href="/dashboard" role="button">Go Back</a>

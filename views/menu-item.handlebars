@@ -1,0 +1,28 @@
+{{#if logged_in}}
+<section class="text-center">
+  <h2>{{name}}</h2>
+  <p>{{description}}</p>
+  <p>{{price}}$</p>
+  {{#if in_stock}}
+  <p>In stock: Yes</p>
+  {{else }}
+  <p>In stock: No</p>
+  {{/if}}
+  {{#if allergy}}
+  <p>{{allergy}}</p>
+  {{/if}}
+  {{#if has_alcohol}}
+  <p>Has Alcohol</p>
+  {{/if}}
+  
+</section>
+
+<section>
+      <a href="/{{itemType}}/{{id}}/edit" target="_parent"><button class="btn btn-primary">Edit Menu Item</button></a>
+      <button id="submit-button" class="btn-danger" data-id="{{id}}">DELETE</button>
+</section>
+
+<script src="/js/delete{{itemType}}.js"></script>
+
+{{/if}}
+<button><a href="/dashboard" role="button">Go Back</a></button>

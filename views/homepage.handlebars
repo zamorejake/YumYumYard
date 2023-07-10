@@ -1,0 +1,42 @@
+<div class="center"><img src="../images/restaurant.jpg" alt="restaurant"></div> </br></br>
+
+<!-- Loop over each object in the projects array -->
+{{#each entrees as |entree| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+      
+  </div>
+  <div class="col-md-7">
+    <p id="entrees">
+      <h2>{{entree.name}} - ${{entree.price}}</h2>
+      <img src="{{entree.image}}" alt="{{entree.name}}" width="200" height="200">
+      {{#if entree.allergy}}
+      </br></br>
+          {{#each entree.allergy}}
+            <span class="allergy-warning">{{this}}</span> &zwnj; 
+          {{/each}}
+      {{/if}}
+      </br></br><p>{{entree.description}}</p>
+    </p>
+  </div>
+</div>
+{{/each}}
+
+{{#each beverages as |beverage| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+      
+  </div>
+  <div class="col-md-7">
+    <p id="beverages">
+      <h2>{{beverage.name}} - ${{beverage.price}}</h2>
+      <img src="{{beverage.image}}" alt="{{beverage.name}}" width="200" height="200">
+      {{#if has_alcohol}}
+      </br></br>
+        <span class="alcohol-warning">Contains Alcohol</span>
+      {{/if}}
+      </br></br><p>{{beverage.description}}</p>
+    </p>
+  </div>
+</div>
+{{/each}}

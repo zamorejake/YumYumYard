@@ -1,0 +1,42 @@
+<section>
+  <div class="">
+    <h3>Add Beverage to Menu:</h3>
+
+    <form class="add-beverage-form">
+      <div class="form-group">
+        <label for="beverage-name">Beverage Name:</label>
+        <input class="form-input" type="text" id="beverage-name" name="name"/>
+      </div>
+      <div class="form-group">
+        <label for="beverage-desc">Beverage Description:</label>
+        <textarea class="form-input" id="beverage-desc" name="description"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="beverage-price">Beverage Price:</label>
+        <input class="form-input" type="text" id="beverage-price" name="price"/>
+      </div>
+      <div class="form-group">
+        <label for="instock">
+        In stock:
+        <input type="checkbox" id="instock" name="instock" role="switch" checked>
+      </label>
+      </div>
+      <div class="form-group">
+        <label for="has_alcohol">
+        Has Alcohol:
+        <input type="checkbox" id="has_alcohol" name="has_alcohol" role="switch" checked>
+      </label>
+      </div>
+      
+      <div class="form-group">
+        <button id="submit-button" type="submit" class="btn btn-primary">Add Beverage</button>
+      </div>
+    </form>
+
+    <button><a href="/dashboard/" role="button">Cancel</a></button>
+
+    
+  </div>
+</section>
+
+<script src="/js/addBeverage.js"></script>

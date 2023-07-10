@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yum Yum Yard</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/pico/css/pico.min.css">
+</head>
+
+<body>
+  <nav>
+      <div class="center">
+      <details role="list">
+        <summary aria-haspopup="listbox"><img src="../images/menu-icon.png" width="50px" height="5
+        0px" alt="icon"></summary>
+        <ul role="listbox">
+          <li><a href="#beverages">Beverages</a></li>
+          <li><a href="#entrees">Entrees</a></li>
+          {{#if logged_in}}
+          <li><a href="/dashboard">Dashboard</a></li>
+          <button class="no-button" id="logout">Logout</button>
+          {{else}}
+          <li><a href="/login">Staff Login</a></li>
+          {{/if}}
+        </ul>
+      </details>
+      </div>
+      <div id="center-title">
+      <h1><a href="/">Yum Yum Yard</a></h1>
+      </div>
+    </nav>
+  <main class="container container-fluid mt-5">
+    <!-- Render the sub layout -->
+    {{{ body }}}
+  </main>
+  <footer>
+    <nav>
+      <ul>
+        <li>
+          <a href="#contact">CONTACT US</a>
+        </li>
+        <li>
+          <a href="#rewards">REWARDS</a>
+        </li>
+        <li>
+          <a href="#careers">CAREERS</a>
+        </li>
+        <li>
+          <a href="#retailShop">SHOP SWAG</a>
+        </li>
+        <li>
+          <a href="#investors">INVESTORS</a>
+        </li>
+      </ul>
+    </nav>
+    <br><br>
+    <br><br>
+    <h2>EXTRA SMOOTH SAUCE</h2>
+  </footer>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
