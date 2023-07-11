@@ -26,9 +26,11 @@ Clone the repo, run npm i, create your .env file with respective usernames, pass
 
 npm i, source schema.sql, node seeds/seed, npm start.
 
-## Credits
+## Credits 
 
 Diego - [GitHub](https://github.com/DiegoABorjas)
+
+Jake - [GitHub](https://github.com/zamorejake)
 
 Tommy - [GitHub](https://github.com/tommyho12)
 
